@@ -1,0 +1,87 @@
+
+step1: Download and install  Heroku cli and gitbash.
+--------------------------------------------------------------
+heroku cli link:
+https://devcenter.heroku.com/articles/heroku-cli
+
+-------------------------------------------------------------
+gitbash
+https://git-scm.com/downloads
+--------------------------------------------------------------
+
+Deployment steps:
+1. git init 
+--q--> To initialize git in current repo
+
+2. git status
+-----> To see the current status of git.
+
+
+3. git add <file_name>
+
+git add . 
+------> to add all files
+
+4. git config --global user.email "email_id"
+
+5. git config --global user.name "user_name"
+
+6. git commit -m "adding test.log file "
+
+7. create a "runtime.txt"
+
+python-3.6.15
+
+8. add gunicorn==20.0.4 inside requirements.txt
+
+9. Create a Procfile with below content.
+
+web: gunicorn app:app
+
+10. Create a account in heroku.
+
+
+
+
+
+HEROKU DEPLOYMENT:
+
+PROJECT LINK
+https://drive.google.com/file/d/1pho7-3BVeup6tFmoOwZn8STaUK0arQtm/view?usp=sharing
+https://drive.google.com/file/d/1Xz_Jn9c0leGT5qv_wdk6CERFSr4U8ykz/view?usp=sharing
+
+mongodb+srv://ineuron:ineuron@cluster1.ypvyb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+HEROKU ENVIRONMENT VARIABLE:
+
+Key: CHROMEDRIVER_PATH Value: /app/.chromedriver/bin/chromedriver
+Key: GOOGLE_CHROME_BIN Value: /app/.apt/usr/bin/google-chrome
+
+
+ADD buildpacks
+python
+https://github.com/heroku/heroku-buildpack-google-chrome
+https://github.com/heroku/heroku-buildpack-chromedriver
+
+
+
+
+
+for Heroku
+------------------------------------
+1. heroku login -i
+
+emaild id:
+password: 
+
+2. heroku git:remote -a <app_name>
+
+
+3. git push heroku master
+
+
+optional
+4. heroku ps:scale web=1
+
+-->avnish@ineuron.ai
+
