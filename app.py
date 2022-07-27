@@ -111,7 +111,7 @@ def feedback():
         if collection_name is not None:
             scrapper_object = FlipkratScrapper(executable_path=ChromeDriverManager().install(),
                                                chrome_options=chrome_options)
-            mongoClient = MongoDBManagement(username='mongodb', password='mongodb')
+            mongoClient = MongoDBManagement(username='deepui', password='12345')
             rows = mongoClient.findAllRecords(db_name="Flipkart-Scrapper", collection_name=collection_name)
             reviews = [i for i in rows]
             dataframe = pd.DataFrame(reviews)
